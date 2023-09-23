@@ -101,7 +101,7 @@ def open_browser(browser_name):
 
 
 def go_to_companyname_homepage(page_url):
-    actual_result = None
+    actual_result = readable_function(go_to_companyname_homepage, page_url)
     assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
 
 
