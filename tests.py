@@ -81,17 +81,21 @@ def test_find_suitable_user():
 # >>> open_browser(browser_name="Chrome")
 # "Open Browser [Chrome]"
 
-
-def test_readable_function():
+def readable_function(func, *args):
     func_name = func.__name__.replace('_', ' ').title()
     arg_name = ", ".join([*args])
+    result = f"{func_name} [{arg_name}]"
+    print(result)
+    return result
+
+def test_readable_function():
     open_browser(browser_name="Chrome")
     go_to_companyname_homepage(page_url="https://companyname.com")
     find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
 
 
 def open_browser(browser_name):
-    actual_result = None
+    actual_result = readable_function(open_browser, browser_name)
     assert actual_result == "Open Browser [Chrome]"
 
 
