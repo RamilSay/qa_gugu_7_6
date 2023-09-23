@@ -88,6 +88,7 @@ def readable_function(func, *args):
     print(result)
     return result
 
+
 def test_readable_function():
     open_browser(browser_name="Chrome")
     go_to_companyname_homepage(page_url="https://companyname.com")
